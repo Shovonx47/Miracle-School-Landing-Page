@@ -10,6 +10,7 @@ export default function Navbar() {
       title: "About Us",
       submenu: ["Mission & Vision", "History", "Administration", "Faculty & Staff", "Governing Body"],
     },
+    
     {
       title: "Academics",
       submenu: ["Programs Offered", "Curriculum", "Academic Calendar", "Departments", "Syllabus"],
