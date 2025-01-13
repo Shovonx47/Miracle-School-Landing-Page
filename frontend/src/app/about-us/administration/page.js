@@ -8,13 +8,13 @@ export default function Administration() {
       name: "Brigadier General Md Shahadat Sikder, ndc, afwc, psc",
       position: "Chairman",
       description: "Governing Body, Birshreshtha Noor Mohammad Public College & Additional Director General Headquarters Border Guard Bangladesh",
-      image: "/images/chairman.jpg" // Add actual image path
+      image: "/assets/images/poeple/inspiring-new-boss.jpg" // Add actual image path
     },
     {
       name: "Sharif Ahmed Chowdhury",
       position: "Member, Teacher Representative",
       description: "Governing Body, Birshreshtha Noor Mohammad Public College Peelkhana, Dhaka.",
-      image: "/images/member1.jpg" // Add actual image path
+      image: "/assets/images/poeple/office-happy-man-work.jpg" // Add actual image path
     },
     // ... Add other members similarly
   ];
@@ -22,10 +22,10 @@ export default function Administration() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const latestAlbumImages = [
-    '/images/album/image1.jpg',
-    '/images/album/image2.jpg',
-    '/images/album/image3.jpg',
-    '/images/album/image4.jpg',
+    '/assets/images/Buildings/low-rise-building.jpg',
+    '/assets/images/Buildings/shot-train-station-roof-with-clocks-showing-quarter-three.jpg',
+    '/assets/images/mv/yan-berthemy-TRrBszDmuWE-unsplash.jpg',
+    '/assets/images/Buildings/analog-landscape-city-with-buildings.jpg',
     // Add more images as needed
   ];
 

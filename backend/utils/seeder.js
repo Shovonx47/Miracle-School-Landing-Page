@@ -1,45 +1,58 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Faculty = require('../models/Faculty');
-const facultyData = require('../data/seedData');
 const connectDB = require('../config/db');
+const Faculty = require('../models/Faculty');
+const MissionVision = require('../models/MissionVision');
+const facultyData = require('../data/seedData');
+const missionVisionData = require('../data/missionVisionData');
 
 // Connect to database
 connectDB();
 
-// Import data into database
-const importData = async () => {
+// Utility function to import data
+const importData = async (Model, data, modelName) => {
   try {
     // Clear existing data
-    await Faculty.deleteMany();
-    
+    await Model.deleteMany();
+
     // Insert new data
-    await Faculty.insertMany(facultyData);
-    
-    console.log('Data imported successfully');
+    await Model.insertMany(data);
+
+    console.log(`${modelName} Data imported successfully`);
     process.exit();
   } catch (error) {
-    console.error(`Error: ${error.message}`);
+    console.error(`Error importing ${modelName} data: ${error.message}`);
     process.exit(1);
   }
 };
 
-// Delete all data from database
-const destroyData = async () => {
+// Utility function to destroy data
+const destroyData = async (Model, modelName) => {
   try {
-    await Faculty.deleteMany();
-    
-    console.log('Data destroyed successfully');
+    await Model.deleteMany();
+
+    console.log(`${modelName} Data destroyed successfully`);
     process.exit();
   } catch (error) {
-    console.error(`Error: ${error.message}`);
+    console.error(`Error destroying ${modelName} data: ${error.message}`);
     process.exit(1);
   }
 };
 
-// If "-d" flag is passed, destroy data, else import data
-if (process.argv[2] === '-d') {
-  destroyData();
+// Determine which action to perform
+const action = process.argv[2];
+const modelName = process.argv[3]; // Pass "Faculty" or "MissionVision" as the third argument
+
+if (!modelName || (modelName !== 'Faculty' && modelName !== 'MissionVision')) {
+  console.error('Please specify a valid model: Faculty or MissionVision');
+  process.exit(1);
+}
+
+const Model = modelName === 'Faculty' ? Faculty : MissionVision;
+const data = modelName === 'Faculty' ? facultyData : missionVisionData;
+
+if (action === '-d') {
+  destroyData(Model, modelName);
 } else {
-  importData();
-} 
+  importData(Model, data, modelName);
+}

@@ -37,7 +37,7 @@ export default function HistoryPage() {
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
-          src="/images/college-old.jpg"
+          src="/assets/images/Buildings/low-rise-building.jpg"
           alt="Historic Notre Dame College"
           fill
           className="object-cover"
