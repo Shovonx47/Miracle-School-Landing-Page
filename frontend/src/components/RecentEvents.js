@@ -5,19 +5,19 @@ export default function RecentEvents() {
     {
       title: "75th Anniversary Celebration",
       date: "December 15, 2024",
-      image: "/assets/images/anniversary.jpg",
+      image: "/assets/images/banners/pexels-goumbik-296301.jpg",
       description: "Notre Dame College celebrated its 75th anniversary with great enthusiasm..."
     },
     {
       title: "Science Fair 2024",
       date: "November 28, 2024",
-      image: "/assets/images/science-fair.jpg",
+      image: "/assets/images/banners/pexels-rdne-7606209.jpg",
       description: "Annual Science Fair showcasing innovative projects from our talented students..."
     },
     {
       title: "Cultural Program",
       date: "November 15, 2024",
-      image: "/assets/images/cultural.jpg",
+      image: "/assets/images/banners/pexels-su-casa-panama-56317556-9650298.jpg",
       description: "Students performed traditional and modern cultural programs..."
     }
   ];

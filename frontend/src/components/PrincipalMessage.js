@@ -8,7 +8,7 @@ export default function PrincipalMessage() {
         <div className="md:w-1/3">
           <div className="relative h-[300px] w-full">
             <Image
-              src="/assets/images/principal.jpg"
+              src="/assets/images/poeple/inspiring-new-boss.jpg"
               alt="Principal"
               fill
               className="object-cover rounded-lg"

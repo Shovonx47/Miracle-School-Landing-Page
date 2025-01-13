@@ -4,7 +4,7 @@ const facultyData = [
     designation: "Principal",
     department: "Physics",
     phone: "+1234567890",
-    image: "https://example.com/images/james-wilson.jpg", // Replace with actual image URL
+    image: "/assets/images/poeple/inspiring-new-boss.jpg", // Replace with actual image URL
     education: [
       "Ph.D. in Physics from MIT",
       "M.S. in Physics from Stanford University",
@@ -26,7 +26,7 @@ const facultyData = [
     designation: "Professor",
     department: "Mathematics",
     phone: "+1234567891",
-    image: "https://example.com/images/sarah-chen.jpg", // Replace with actual image URL
+    image: "/assets/images/poeple/man-portrait-posing-loft-modern-space.jpg", // Replace with actual image URL
     education: [
       "Ph.D. in Mathematics from Princeton",
       "M.S. in Applied Mathematics from CalTech"
@@ -47,7 +47,7 @@ const facultyData = [
     designation: "Associate Professor",
     department: "Chemistry",
     phone: "+1234567892",
-    image: "https://example.com/images/michael-brown.jpg", // Replace with actual image URL
+    image: "/assets/images/poeple/office-happy-man-work.jpg", // Replace with actual image URL
     education: [
       "Ph.D. in Chemistry from UC Berkeley",
       "B.S. in Chemistry from UCLA"

@@ -7,19 +7,19 @@ export default function NewsEventsSection() {
       date: "March 15, 2024",
       title: "Annual Sports Day",
       description: "Join us for our annual sports day celebration featuring various competitions.",
-      image: "/images/sports.jpg"
+      image: "/assets/images/banners/pexels-goumbik-296301.jpg"
     },
     {
       date: "March 20, 2024",
       title: "Science Fair 2024",
       description: "Students showcase their innovative science projects.",
-      image: "/images/science-fair.jpg"
+      image: "/assets/images/banners/pexels-rdne-7606209.jpg"
     },
     {
       date: "March 25, 2024",
       title: "Cultural Program",
       description: "Celebrating our rich cultural heritage through performances.",
-      image: "/images/cultural.jpg"
+      image: "/assets/images/banners/pexels-su-casa-panama-56317556-9650298.jpg"
     }
   ];
 

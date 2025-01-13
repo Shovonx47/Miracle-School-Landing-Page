@@ -8,7 +8,7 @@ export default function Navbar() {
   const menuItems = [
     {
       title: "About Us",
-      submenu: ["Mission & Vision", "History", "Administration", "Faculty & Staff", "Governing Body"],
+      submenu: ["Mission & Vision", "History", "Administration", "Faculty & Staff",],
     },
     
     {
