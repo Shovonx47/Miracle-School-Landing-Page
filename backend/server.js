@@ -3,19 +3,23 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
+const app = express();
+
 // Load env vars and connect to the database
 connectDB();
 
-const app = express();
-
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/api/mission-vision', require('./routes/missionVisionRoutes'));
 app.use('/api/faculty', require('./routes/facultyRoutes'));
+app.use('/api/location', require('./routes/locationRoutes')); // New route added
 
 // Error handling middleware
 app.use((err, req, res, next) => {

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function RecentEvents() {
   const events = [
@@ -27,7 +28,11 @@ export default function RecentEvents() {
       <h2 className="text-2xl font-bold mb-6">Recent Events</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.map((event, index) => (
-          <div key={index} className="rounded-lg overflow-hidden shadow-md">
+          <Link
+            key={index}
+            href={`/news-and-events/upcoming-events/${encodeURIComponent(event.title.toLowerCase().replace(/ /g, '-'))}`}
+            className="rounded-lg overflow-hidden shadow-md transition-transform hover:scale-105"
+          >
             <div className="relative h-48">
               <Image
                 src={event.image}
@@ -40,17 +45,19 @@ export default function RecentEvents() {
               <h3 className="font-bold text-lg mb-2">{event.title}</h3>
               <p className="text-sm text-gray-500 mb-2">{event.date}</p>
               <p className="text-gray-600 text-sm mb-4">{event.description}</p>
-              <button className="text-blue-600 hover:text-blue-800 text-sm font-semibold">
+              <span className="text-blue-600 hover:text-blue-800 text-sm font-semibold">
                 Read More →
-              </button>
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="text-center mt-8">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
-          View All Events
-        </button>
+        <Link href="/news-and-events/upcoming-events">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+            View All Events
+          </button>
+        </Link>
       </div>
     </div>
   );

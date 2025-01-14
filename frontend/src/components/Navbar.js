@@ -29,7 +29,7 @@ export default function Navbar() {
     },
     {
       title: "Contact Us",
-      submenu: ["Contact Information", "Location Map", "Inquiry Form"],
+      submenu: ["Contact Information", "Location Map"],
     },
   ];
 

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NoticeBoard() {
   const notices = [
     {
@@ -27,9 +29,9 @@ export default function NoticeBoard() {
           </div>
         ))}
       </div>
-      <button className="mt-4 text-blue-600 hover:text-blue-800 font-semibold">
+      <Link href="/news-and-events/notices" className="mt-4 text-blue-600 hover:text-blue-800 font-semibold inline-block">
         More Notice →
-      </button>
+      </Link>
     </div>
   );
 } 
