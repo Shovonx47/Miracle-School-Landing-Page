@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import NoticeTicker from '@/components/NoticeTicker';
 import Footer from '@/components/Footer';
+import FeedbackButton from '@/components/FeedbackButton';
 import './globals.css';
 import { Provider } from 'react-redux';
 import { store } from '../redux/store';
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <FeedbackButton /> {/* Added FeedbackButton here */}
         </body>
       </html>
     </Provider>
